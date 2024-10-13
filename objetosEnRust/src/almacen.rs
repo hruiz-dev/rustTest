@@ -5,16 +5,17 @@ pub struct Almacen {
     pub nombre: String,
     pub articulos: Vec<Articulo>,
 }
-/*
 
-
-*/
 impl Almacen {
     pub fn new(nombre: String) -> Almacen {
         Almacen {
             nombre,
             articulos: Vec::new(),
         }
+    }
+
+    pub fn get_nombre(&self) -> &String {
+        &self.nombre
     }
 
     pub fn add_articulo(&mut self, producto: Articulo) {
